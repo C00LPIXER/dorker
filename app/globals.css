@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.matrix-glow {
+  text-shadow: 0 0 10px #00ff00;
+}
+.search-button {
+  transition: all 0.3s ease;
+  border: 1px solid #00ff00;
+  background: rgba(0, 17, 0, 0.7);
+  margin-top: auto;
+}
+.search-button:hover {
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+.dork-card {
+  background: rgba(0, 17, 0, 0.7);
+  border: 1px solid #00ff00;
+  transition: all 0.3s ease;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.dork-card:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+}
+.input-field {
+  background: rgba(0, 17, 0, 0.7);
+  border: 1px solid #00ff00;
+  color: #00ff00;
+}
+.input-field:focus {
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  border-color: #00ff00;
+}
+.example-text {
+  color: #00ffcc;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.page-button {
+  background: rgba(0, 255, 0, 0.2);
+  border: 1px solid #00ff00;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.page-button:hover {
+  background: rgba(0, 255, 0, 0.5);
+}
+.current-page {
+  color: #ffdd00;
+}
+.tried-query {
+  background: #ff000033;
+  border-color: #ff0000;
+  color: #ff0000;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.logo {
+  width: 100px;
+}
+.nav-links a {
+  color: #00ff00;
+  text-decoration: none;
+  margin-left: 16px;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #00ffcc;
+}
+
+.section-header {
+  text-decoration: underline;
+}
+.link {
+  color: #00ffcc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.link:hover {
+  color: #00ffee;
+}
+.table-auto th,
+.table-auto td {
+  font-size: 0.9rem;
+}
+.footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #00ff00;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
